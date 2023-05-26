@@ -1,4 +1,4 @@
-package com.helsinkicitybikeapp.backend.controllers;
+package com.helsinkicitybikeapp.backend.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

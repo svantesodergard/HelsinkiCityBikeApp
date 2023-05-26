@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_DATABASE=helsinki_city_bike
+      - MYSQL_USER=springuser
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    volumes:
+      - "./mysql-conf:/etc/mysql/conf.d"
+      - "./sql:/docker-entrypoint-initdb.d"
+      - "./data:/data"
+    network_mode: host
+
+# backend:
+#   build: .
+#   ports:
+#     - "8080:8080"
+#   environment:
+#     - DB_PASSWORD=${DB_PASSWORD}
+#     - MYSQL_HOST=mysql
