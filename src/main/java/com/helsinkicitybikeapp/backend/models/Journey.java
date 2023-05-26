@@ -2,6 +2,7 @@ package com.helsinkicitybikeapp.backend.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import lombok.Data;
 
@@ -14,9 +15,9 @@ public class Journey {
     @Id
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     private Station departureStation;
-    @OneToOne
+    @ManyToOne
     private Station arrivalStation;
 
     private Long distanceCoveredInMeters;

@@ -5,4 +5,4 @@ enclosed by '"'
 lines terminated by '\n'
 ignore 1 rows
 (@FID,@ID,@Nimi,@Namn,@Name,@Osoite,@Adress,@Kaupunki,@Stad,@Operaattor,@Kapasiteet,@x,@y)
-set id=@ID, name=@Nimi;
+set id=@ID, name=@Nimi, capacity=@Kapasiteet, x=@x, y=@y;
